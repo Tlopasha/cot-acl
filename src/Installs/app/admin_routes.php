@@ -23,7 +23,7 @@ if(\tlopasha\cotACl\Helpers\LvHelper::laravel_ver() == 5.3) {
 }
 $prefix = config('LaravelVueAdmin.adminRoute');
 
-Route::group(['as' => $as, 'middleware' => ['auth', 'permission:ADMIN_PANEL']], function () {
+Route::group(['as' => $as, 'middleware' => ['auth', 'permission:ADMIN_PANEL']], function () use ($as, $prefix) {
 
 	// Dashboard //
 
