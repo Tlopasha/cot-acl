@@ -1,13 +1,42 @@
 {
-    "name": "tlopasha/cot-acl",
-    "description": "Access Control List",
-    "type": "library",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Mohamad tlopasha",
-            "email": "mhd.sh.mhd@gmail.com"
-        }
-    ],
-    "require": {}
+  "name": "tlopasha/cot-acl",
+  "description": "Access Control List",
+  "keywords": ["laravel", "ACL"],
+  "homepage": "https://github.com/Tlopasha/cot-acl",
+  "support": {
+    "issues": "https://github.com/Tlopasha/cot-acl/issues",
+    "source": "https://github.com/Tlopasha/cot-acl"
+  },
+  "version": "1.0.00",
+  "require": {
+    "illuminate/support": "5.*",
+    "laravelcollective/html": "^5.2|^5.1",
+    "illuminate/container": "^5.2|^5.1",
+    "yajra/laravel-datatables-oracle": "~6.0",
+    "creativeorange/gravatar": "^1.0",
+    "doctrine/dbal": "~2.3",
+    "zizaco/entrust": "1.7.0",
+    "spatie/laravel-backup": "^3.0.0"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Mohamad Tlopasha",
+      "email": "mhd.sh.mhd@gmail.com",
+      "homepage": "https://github.com/tlopasha",
+      "role": "Developer"
+    }
+  ],
+  "classmap": [
+    "src/Controllers",
+    "src/Models"
+  ],
+  "autoload": {
+    "psr-4": {
+      "tlopasha\\cotACl\\": "src/"
+    },
+    "files": [
+    ]
+  }
 }
+
