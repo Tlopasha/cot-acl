@@ -989,14 +989,14 @@ class Module extends Model
 			if($model_name == "User" || $model_name == "Role" || $model_name == "Permission") {
 				if(file_exists(base_path('app/'.$model_name.".php"))) {
 					$model = "App\\".$model_name;
-					return $model::count();
+					return $model::get();
 				} else {
 					return "Model doesn't exists";
 				}
 			} else {
 				if(file_exists(base_path('app/Models/'.$model_name.".php"))) {
 					$model = "App\\Models\\".$model_name;
-					return $model::count();
+					return $model::get();
 				} else {
 					return "Model doesn't exists";
 				}

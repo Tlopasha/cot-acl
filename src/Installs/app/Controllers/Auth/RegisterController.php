@@ -44,9 +44,9 @@ class RegisterController extends Controller
 
     public function showRegistrationForm()
     {
-        $roleCount = Role::count();
+        $roleCount = Role::get();
 		if($roleCount != 0) {
-			$userCount = User::count();
+			$userCount = User::get();
 			if($userCount == 0) {
 				return view('auth.register');
 			} else {
@@ -85,7 +85,7 @@ class RegisterController extends Controller
     {
         // TODO: This is Not Standard. Need to find alternative
         Eloquent::unguard();
-        
+
         $employee = Employee::create([
             'name' => $data['name'],
             'designation' => "Super Admin",
@@ -102,7 +102,7 @@ class RegisterController extends Controller
             'date_left' => date("Y-m-d"),
             'salary_cur' => 0,
         ]);
-        
+
         $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
@@ -112,7 +112,7 @@ class RegisterController extends Controller
         ]);
         $role = Role::where('name', 'SUPER_ADMIN')->first();
         $user->attachRole($role);
-    
+
         return $user;
     }
 }

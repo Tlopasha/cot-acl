@@ -41,9 +41,9 @@ class LoginController extends Controller
 
     public function showLoginForm()
     {
-		$roleCount = Role::count();
+		$roleCount = Role::get();
 		if($roleCount != 0) {
-			$userCount = User::count();
+			$userCount = User::get();
 			if($userCount == 0) {
 				return redirect('register');
 			} else {
