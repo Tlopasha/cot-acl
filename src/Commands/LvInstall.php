@@ -45,7 +45,7 @@ class LvInstall extends Command
 		try {
 			$this->info('LaravelVueAdmin installation started...');
 
-			$from = base_path('vendor/tlopasha/cotACL/src/Installs');
+			$from = base_path('vendor/tlopasha/cot-acl/src/Installs');
 			$to = base_path();
 
 			$this->info('from: '.$from." to: ".$to);

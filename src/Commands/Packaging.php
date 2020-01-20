@@ -41,7 +41,7 @@ class Packaging extends Command
         $this->info('Exporting started...');
 
         $from = base_path();
-        $to = base_path('vendor/tlopasha/cotACL/src/Installs');
+        $to = base_path('vendor/tlopasha/cot-acl/src/Installs');
 
         $this->info('from: '.$from." to: ".$to);
 
