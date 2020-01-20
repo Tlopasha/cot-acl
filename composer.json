@@ -1,0 +1,13 @@
+{
+    "name": "tlopasha/cot-acl",
+    "description": "Access Control List",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mohamad tlopasha",
+            "email": "mhd.sh.mhd@gmail.com"
+        }
+    ],
+    "require": {}
+}
